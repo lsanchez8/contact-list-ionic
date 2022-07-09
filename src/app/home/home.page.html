@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title style="font-size: 2.3em; line-height: 3.3em">
+      Users
+      <br />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let user of usersData" class="card-design">
+    <ion-avatar slot="start">
+      <img src="{{user.picture.thumbnail}}" />
+    </ion-avatar>
+    <ion-label (click)="gotoUserDetails(user)"
+      ><b>{{user.name.first}} {{user.name.last}}</b>
+      <br />{{user.location?.street?.name}} <br />{{user.location?.country}}
+      <br />
+      <ion-badge [color]="user.gender == 'male' ? 'primary' : 'danger'"
+        >{{user.gender == 'male' ? 'Male' : 'Female'}}</ion-badge
+      >
+    </ion-label>
+
+    <ion-label class="ion-text-right"
+      >{{formatDate(user.registered?.date)}}</ion-label
+    >
+  </ion-item>
+</ion-content>

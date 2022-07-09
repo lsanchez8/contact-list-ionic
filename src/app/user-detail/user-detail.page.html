@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header">
+    <ion-avatar>
+      <img src="{{user.picture?.large}}" />
+    </ion-avatar>
+    <span class="main-title">
+      {{user.name?.first}} {{user.name?.last}}<br />
+      <ion-badge
+        class="ion-text-center"
+        [color]="user?.gender == 'male' ? 'primary' : 'danger'"
+        >{{user?.gender == 'male' ? 'Male' : 'Female'}}</ion-badge
+      >
+    </span>
+  </div>
+
+  <ion-row style="padding: 15px">
+    <ion-col size="6"
+      >Name<br />
+      <ion-input
+        class="ion-no-padding"
+        disabled
+        type="text"
+        value="{{user.name?.first}}"
+      ></ion-input>
+    </ion-col>
+    <ion-col size="6"
+      >Lastname<br />
+      <ion-input
+        class="ion-no-padding"
+        disabled
+        type="text"
+        value="{{user.name?.last}}"
+      ></ion-input>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 15px">
+    <ion-col size="12"
+      >Phone<br />
+      <ion-input
+        class="ion-no-padding"
+        disabled
+        type="text"
+        value="{{user?.phone}}"
+      ></ion-input>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 15px">
+    <ion-col size="12"
+      >Email<br />
+      <ion-input
+        class="ion-no-padding"
+        disabled
+        type="text"
+        value="{{user?.email}}"
+      ></ion-input>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 15px">
+    <ion-col size="12"
+      >user created<br />
+      <ion-input
+        class="ion-no-padding"
+        disabled
+        type="text"
+        value="{{formatDate(user.registered?.date)}}"
+      ></ion-input>
+    </ion-col>
+  </ion-row>
+
+  <h2 class="ion-text-center">Address</h2>
+
+  <ion-fab
+    (click)="onClick()"
+    vertical="bottom"
+    horizontal="start"
+    slot="fixed"
+  >
+    <ion-fab-button>
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card class="card-color">
+    <ion-card-header>
+      <ion-card-title class="number-color">1</ion-card-title>
+
+      <ion-card-title class="ion-text-right"
+        >{{user.location?.city}}</ion-card-title
+      >
+      <ion-card-title class="ion-text-right"
+        >{{user.location?.street.name}}
+        {{user.location?.street.number}}</ion-card-title
+      >
+      <ion-card-title class="ion-text-right"
+        >{{user.location?.country}}</ion-card-title
+      >
+    </ion-card-header>
+
+    <ion-card-content> </ion-card-content>
+  </ion-card>
+</ion-content>

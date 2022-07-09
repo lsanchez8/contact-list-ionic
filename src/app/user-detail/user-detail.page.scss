@@ -1,0 +1,53 @@
+.header {
+  width: 100vw;
+  height: 26vh;
+  //   background-color: #f7f8fa;
+  background-color: rgb(24, 82, 158);
+  color: white;
+}
+
+.main-title {
+  font-size: 2.3em;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.3em;
+  margin: auto;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+ion-avatar {
+  width: 80px;
+  height: 80px;
+  z-index: 3;
+  margin: auto;
+  position: relative;
+  top: 0.9em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+ion-card {
+  margin-top: 30px;
+}
+
+.number-color {
+  position: absolute;
+  font-size: 6em;
+  color: rgb(52, 52, 52);
+}
+
+.card-color {
+  //   background-color: rgb(56, 142, 255);
+}
+.ion-text-right {
+  //   color: white;
+}
+
+ion-badge {
+  font-size: 0.5em;
+}
