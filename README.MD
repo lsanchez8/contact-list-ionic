@@ -10,9 +10,11 @@ After that run the project using the command `ionic serve` if running from a PC
 
 
 ## Sample of the contact list ###
+This is how it should all look like when you run the project!
+
+
 ![](https://raw.githubusercontent.com/lsanchez8/contact-list-ionic/5eb14ac416f4cabd61a8f83b00311593e6951162/sample.gif
 )
 
-This is how it should all look like when you run the project!
 
 
